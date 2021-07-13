@@ -1,6 +1,3 @@
-import os
-
-
 def avoid_complex_comprehension_non_compliant_1():
     text = [['bar', 'foo', 'fooba'], ['Rome', 'Madrid', 'Houston'], ['aa', 'bb', 'cc', 'dd']]
     text_3 = [y.upper() for x in text if len(x) == 3 for y in x if y.startswith('f')]
@@ -60,9 +57,6 @@ def non_conformant_case2_socket_connection_timed_out():
     s.close()
 
 
-import os
-
-
 class Animals:
     def __init__(self):
         self.lion = 'carnivore'
@@ -106,26 +100,11 @@ def nonconformant_case1_subprocess_communicate_timeout_expires_rule():
 
 class BaseSSLError(BaseException):
     pass
-
-def inline_negation_rule():
-    if not a is b:
-        print(a)
-#guru:v1:internal:pythonbestpractices:exit_class_method_re_raise_exception:1.0
-class Exit_class_method_re_raise_exception:
-    def __enter__(self):
-        return self
-
-    def __exit__(self, *args):
-        a = 1
-        b = 2
-        raise
-#pythonbestpractices:prefer_secrets_for_prng_for_cryptography_rule
-def prefer_secrets_for_prng_for_cryptography_rule():
-    # hashlib.md5.update
-    # random.choice
-    import random
-    import hashlib
-    complex_str = "abcdefghijklmnopqrstuvwkyz123456789!@#$%^&*()"
-    salt = random.choice(complex_str).encode()
-    hash_str = hashlib.md5()
-    hash_str.update(salt)
+# guru:v1:internal:pythonbestpractices:avoid_complex_comprehension:1.0
+# guru:v1:internal:pythonbestpractices:efficient_concatenation_of_immutable_objects_rule:1.0
+# guru:v1:internal:pythonbestpractices:unnecessary_iteration_rule:1.0
+# guru:v1:internal:pythonbestpractices:create_custom_exception_from_exception_class_rule:1.0
+# guru:v1:internal:pythonbestpractices:do_not_directly_modify_dict:1.0
+# guru:v1:internal:pythonbestpractices:socket_connection_timeout_rule:1.0
+# guru:v1:internal:pythonbestpractices:error_prone_multidimensional_list_init
+# guru:v1:internal:pythonbestpractices:subprocess_communicate_timeout_expires_rule:2.0
